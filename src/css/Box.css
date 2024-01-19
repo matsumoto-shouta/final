@@ -1,0 +1,69 @@
+.insert{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.726);
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+
+.box{
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.box:before, .box17:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.box:before {left: 10px;}
+.box:after {right: 10px;}
+.box p {
+    margin: 0; 
+    padding: 0;
+}
+
+p{
+    font-size: 20px;
+}
+
+.selectbox {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.selectbox::after {
+    position: absolute;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    background-color: #535353;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox select {
+    appearance: none;
+    min-width: 230px;
+    height: 2em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border: none;
+    border-bottom: 2px solid #2e1f00;
+    background-color: #fff;
+    color: #333333;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.selectbox select:focus {
+    outline: none;
+}

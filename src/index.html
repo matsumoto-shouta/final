@@ -2,12 +2,18 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/Design.css">
     <title>コーヒー豆管理システム</title>
 </head>
-<body>    
-    <button type="submit">豆一覧</button>
-    <button type="submit">豆登録</button>
-    <button type="submit">豆更新</button>
-    <button type="submit">豆削除</button>
+<body> 
+    <div class="index">
+    <h2 id="h2">コーヒー豆管理システム</h2>
+
+    <div class="btn-flat">
+        <input type="button" id="btn" onclick="location.href='View.php'" value="豆一覧">
+        <input type="button" id="btn" onclick="location.href='Insert-input.php'" value="豆追加">
+        <input type="button" id="btn" onclick="location.href='Update-input.php'" value="豆編集">
+    </div>
+    </div>
 </body>
 </html>

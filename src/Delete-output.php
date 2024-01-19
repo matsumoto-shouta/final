@@ -1,7 +1,6 @@
 <?php require 'DB_connect.php'; ?>
 <?php require 'header.php'; ?>
 
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,13 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+
 <?php
     $pdo = new PDO($connect,USER,PASS);
-    $sql = $pdo -> prepare('insert into beans(name,type,country) values(?,?,?)');
-    $sql -> execute([$_POST['name'],$_POST['type'],$_POST['country']]);
+    $sql = $pdo -> prepare('delete from beans where id = ?');
+    $sql -> execute([$_POST['id']]);
 
-    echo '<p>新たな豆を追加しました</p>';
+    echo '「',$_POST['name'],'」の豆を削除しました。';
+    echo '<hr>';
 
 ?>
 
